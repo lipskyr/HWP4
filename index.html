@@ -3,10 +3,59 @@
   <style>
    body {
     background-color: #42F6FF;
-    color: white;
-    width: 80%;
-    margin: 200;
+    color: navy;
+  
+   
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 50px;
+
+     gap: 10px;
+     
    }
+
+    .top {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      }
+
+     .image1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+     }
+
+      .image2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+
+     }
+
+
+
+       .text { 
+   grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 4;
+
+     }
+
+  .footer {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 4;
+      grid-row-end: 5;
+
+}
+
 
    p {
      color: lime;
@@ -23,6 +72,10 @@
     color: red;
     
   }
+
+  h1 {
+    font-size: 80px;
+} 
   </style>
 
     
@@ -31,8 +84,24 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
   </head>
+
+
+
+
 <body>
+  <div class="top">
   <center><h1>This is a Really Big Header</h1></center>
+  </div>
+
+   <div class="image1">
+<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo"></center>
+</div>
+
+   <div class="image2">
+<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo"></center>
+</div>
+
+   <div class="text">  
   <a href="www.vschsd.org">Click here</a> to visit the Valley Stream Central High School District website.
   <marquee>Look at this text over here as well!  It is important text that we don't want to get removed from our view.  I promise!</marquee>
   <h2>This is a Big Header</h2>
@@ -43,7 +112,7 @@
     This is a test!
  
   </i></b>
-  <img src="638x472.jpeg" width="100" alt="The Falcon Report Logo">
+  
 
   <h3>These are the things that are good about this website:</h3>
   <ul>
@@ -52,6 +121,11 @@
   <li>At least some of the things are speld right</li>
    </ul>
   <p>This is another paragraph!  It should look just like the first paragraph.</p>
+</div>
+
+<div class="footer">
+This is the bottom of the website.  Here I put all the legal disclaimers and other minute details that I must have but I don't want people to focus on.  If you are still reading this, you are wasting time but that's ok!  I won't tell anyone!
+</div>
 </body>
   
 </html>
