@@ -1,52 +1,52 @@
 <html>
   <head>
   <style>
-   body {
-    background-color: #42F6FF;
-    color: navy;
+    body {
+      background-color: #42F6FF;
+      color: navy;
   
-   
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 200px 1fr 1fr 50px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 1fr 1fr 50px;
-
-     gap: 10px;
+      gap: 10px;
      
    }
 
-    .top {
+   .top {
       grid-column-start: 1;
       grid-column-end: 4;
       grid-row-start: 1;
       grid-row-end: 2;
-      }
+      background-color: navy;
+      color: lime;
+   }
 
-     .image1 {
+   .image1 {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 2;
       grid-row-end: 3;
 
-     }
+   }
 
-      .image2 {
+   .image2 {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 3;
       grid-row-end: 4;
 
-     }
+   }
 
 
 
-       .text { 
-   grid-column-start: 2;
+   .text { 
+      grid-column-start: 2;
       grid-column-end: 4;
       grid-row-start: 2;
       grid-row-end: 4;
 
-     }
+    }
 
   .footer {
       grid-column-start: 1;
@@ -54,7 +54,7 @@
       grid-row-start: 4;
       grid-row-end: 5;
 
-}
+   }
 
 
    p {
@@ -75,7 +75,11 @@
 
   h1 {
     font-size: 80px;
-} 
+   } 
+
+     img {
+     border: 4px navy groove;
+   }
   </style>
 
     
@@ -90,15 +94,15 @@
 
 <body>
   <div class="top">
-  <center><h1>This is a Really Big Header</h1></center>
+  <center><h1 onclick="this.innerHTML = 'You Clicked On Me!'; style = 'color:red;';" ondblclick="this.innerHTML = 'This is a Really Big Header';">This is a Really Big Header</h1></center>
   </div>
 
    <div class="image1">
-<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo"></center>
+<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo" onclick="this.style='border-color: yellow;';"></center>
 </div>
 
    <div class="image2">
-<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo"></center>
+<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo" onclick="this.src='reallyhot.jpg';"></center>
 </div>
 
    <div class="text">  
