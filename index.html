@@ -82,6 +82,25 @@
    }
   </style>
 
+    <script>
+
+    function webpageChanger() {
+      document.getElementById("thing2").innerHTML = "This item has been redacted.";
+      document.getElementById("thing3").innerHTML = "This item has also been redacted.";
+      document.getElementById("thing1").src = "reallyhot.jpg";
+      document.getElementById("thing3").style = "color: #000000;";
+    }
+
+
+
+
+
+
+
+
+      
+    </script>
+
     
     <title>My Hello World Website</title>
     <meta http-equiv='cache-control' content='no-cache'> 
@@ -94,7 +113,7 @@
 
 <body>
   <div class="top">
-  <center><h1 onclick="this.innerHTML = 'You Clicked On Me!'; style = 'color:red;';" ondblclick="this.innerHTML = 'This is a Really Big Header';">This is a Really Big Header</h1></center>
+  <center><h1 onclick="webpageChanger()">This is a Really Big Header</h1></center>
   </div>
 
    <div class="image1">
@@ -102,7 +121,7 @@
 </div>
 
    <div class="image2">
-<center><img src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo" onclick="this.src='reallyhot.jpg';"></center>
+<center><img id="thing1" src="638x472.jpeg" width="90%" height="90%" alt="The Falcon Report Logo" onclick="this.src='reallyhot.jpg';"></center>
 </div>
 
    <div class="text">  
@@ -121,8 +140,8 @@
   <h3>These are the things that are good about this website:</h3>
   <ul>
   <li>It is really simple</li>
-  <li>It did not take long to code</li>
-  <li>At least some of the things are speld right</li>
+  <li id="thing2">It did not take long to code</li>
+  <li id="thing3">At least some of the things are speld right</li>
    </ul>
   <p>This is another paragraph!  It should look just like the first paragraph.</p>
 </div>
