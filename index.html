@@ -77,6 +77,10 @@
     font-size: 80px;
    } 
 
+    button {
+      font-size: 50px;
+    }
+
      img {
      border: 4px navy groove;
    }
@@ -84,12 +88,25 @@
 
     <script>
 
+     var numClicks =0;
+      
     function webpageChanger() {
       document.getElementById("thing2").innerHTML = "This item has been redacted.";
       document.getElementById("thing3").innerHTML = "This item has also been redacted.";
       document.getElementById("thing1").src = "reallyhot.jpg";
       document.getElementById("thing3").style = "color: #000000;";
+      document.getElementById("thing2").innerHTML = "<img src='reallyhot.jpg'>";
     }
+
+      function countClick() {
+        numClicks++;
+        document.getElementById('theButton').disabled=false;
+        
+      }
+
+      function showCount() {
+        document.getElementById("thing2").innerHTML = numClicks;
+      }
 
 
 
@@ -113,7 +130,7 @@
 
 <body>
   <div class="top">
-  <center><h1 onclick="webpageChanger()">This is a Really Big Header</h1></center>
+  <center><h1 onclick="countClick();">This is a Really Big Header</h1></center>
   </div>
 
    <div class="image1">
@@ -125,6 +142,8 @@
 </div>
 
    <div class="text">  
+     <button id="theButton" disabled="true" onclick="webpageChanger();">CLICK ON ME!</button>
+      <button id="countButton" onclick="showCount();">Tell the Count!</button>
   <a href="www.vschsd.org">Click here</a> to visit the Valley Stream Central High School District website.
   <marquee>Look at this text over here as well!  It is important text that we don't want to get removed from our view.  I promise!</marquee>
   <h2>This is a Big Header</h2>
